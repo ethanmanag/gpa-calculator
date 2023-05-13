@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+body {
+    background-color: #2a2b2dff;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    padding-top: 30px;
+    margin: 0;
+    padding-bottom: 400px;
+}
+
+main {
+    margin-top: 270px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: #48466D;
+    background-color: #FCF8EC;
+    font-size: 40px;
+    font-weight: bold;
+    width: 500px;
+    padding: 70px 10px;
+    border: solid 10px #48466D;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.background {
+    background-color: #395B64;
+    position: absolute;
+    margin-left: 70px;
+    margin-top: -8px;
+    height: 417px;
+    width: 925px;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+.row1-sort,
+.row2-sort {
+    display: inline-block;
+    margin-top: -30px;
+    margin-right: 90px;
+}
+
+.row2-sort {
+    margin-right: 120px;
+}
+
+.row1,
+.row2 {
+    margin-left: 265px;
+}
+
+.freshman-a,
+.sophomore-a,
+.junior-a,
+.senior-a {
+    margin-left: 30px;
+}
+
+.freshman,
+.sophomore,
+.junior,
+.senior {
+    display: inline-block;
+    color: #F7ECDE;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.freshman {
+    margin: 0px 95px;
+    margin-right: 45px;
+}
+
+.sophomore {
+    margin: 0px 80px;
+    margin-right: 40px;
+}
+
+.junior {
+    margin: 0px 110px;
+    margin-right: 105px;
+}
+
+.senior {
+    margin: 0px 130px;
+    margin-right: 65px;
+}
+
+.classes {
+    padding-left: 65px;
+}
+
+.grades {
+    padding-left: 0px;
+}
+
+.grades,
+.classes {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    outline: none;
+    width: 200px;
+    z-index: 1;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.text-box {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    width: 180px;
+    background-color: #F7ECDE;
+}
+
+.gpa-button {
+    background-color: #187498;
+    border: none;
+    color: #F7ECDE;
+    border-radius: 10px;
+    width: 500px;
+    height: 100px;
+    margin-left: 275px;
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    transition: opacity .15s;
+}
+
+.gpa-button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.gpa-button:active {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.result,
+.gpa-result {
+    font-size: 50px;
+    margin-left: 1320px;
+    
+}
+
+.result {
+    color: #F7ECDE;
+    margin-top: -100px;
+    margin-left: 1405px;
+}
+
+.grade-points {
+    color: #F7ECDE;
+    background-color: #48466D;
+    font-size: 18px;
+    width: 500px;
+    font-weight: bold;
+    border-radius: 25px;
+    margin-top: -525px;
+    margin-bottom: 350px;
+    padding: 5px 80px;
+    margin-left: 1130px;
+}
+
+.gpa-result {
+    color: #F7ECDE;
+    background-color: #27496D;
+    width: 200px;
+    font-weight: bold;
+    border-radius: 25px;
+    margin-top: -300px;
+    padding-left: 80px;
+    padding-bottom: 100px;
+}
+

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GPA Calculator</title>
+        <link rel="stylesheet" href="gpa.css">
+        <script defer src="gpa.js"></script>
+    </head>
+    <body>
+        <div class="title">
+            GPA Calculator
+        </div>
+
+        <main>
+            <div class="row1">
+                <input for="freshmanCheck" id="freshmanCheck" type="checkbox" onclick="freshman(), boxHeight()" checked>
+                <p class="row1-sort">Include Freshman Year</p>
+                <input for="sophomoreCheck" id="sophomoreCheck" type="checkbox" onclick="sophomore(), boxHeight()">
+                <p class="row1-sort">Include Sophomore Year</p>
+            </div>
+
+            <div class="row2">
+                <input for="juniorCheck" id="juniorCheck" type="checkbox" onclick="junior(), boxHeight()"> 
+                <p class="row2-sort">Include Junior Year</p>
+                <input for="seniorCheck" id="seniorCheck" type="checkbox" onclick="senior(), boxHeight()">
+                <p class="row2-sort">Include Senior Year</p>
+            </div>
+
+            <div class="background"></div>
+            
+            
+            <div id="freshmanGrades" class="freshman-a">
+                <div>
+                    <p class="freshman">Freshman Semester 1</p>
+                    <p class="freshman">Freshman Semester 2</p>
+                </div>
+                <div class="classes">
+                    <input class="text-box" type="text" placeholder="Enter Class 1">
+                    <input class="text-box" type="text" placeholder="Enter Class 2">
+                    <input class="text-box" type="text" placeholder="Enter Class 3">
+                    <input class="text-box" type="text" placeholder="Enter Class 4">
+                    <input class="text-box" type="text" placeholder="Enter Class 5">
+                    <input class="text-box" type="text" placeholder="Enter Class 6">
+                </div>
+                <div class="grades">
+                    <input id="freshman_A_sem1" class="text-box" type="text" placeholder="Grade 1">
+                    <input id="freshman_B_sem1" class="text-box" type="text" placeholder="Grade 2">
+                    <input id="freshman_C_sem1" class="text-box" type="text" placeholder="Grade 3">
+                    <input id="freshman_D_sem1" class="text-box" type="text" placeholder="Grade 4">
+                    <input id="freshman_E_sem1" class="text-box" type="text" placeholder="Grade 5">
+                    <input id="freshman_F_sem1" class="text-box" type="text" placeholder="Grade 6">
+                </div>
+                <div class="classes">
+                    <input class="text-box" type="text" placeholder="Enter Class 1">
+                    <input class="text-box" type="text" placeholder="Enter Class 2">
+                    <input class="text-box" type="text" placeholder="Enter Class 3">
+                    <input class="text-box" type="text" placeholder="Enter Class 4">
+                    <input class="text-box" type="text" placeholder="Enter Class 5">
+                    <input class="text-box" type="text" placeholder="Enter Class 6">
+                </div>
+                <div class="grades">
+                    <input id="freshman_A_sem2" class="text-box" type="text" placeholder="Grade 1">
+                    <input id="freshman_B_sem2" class="text-box" type="text" placeholder="Grade 2">
+                    <input id="freshman_C_sem2" class="text-box" type="text" placeholder="Grade 3">
+                    <input id="freshman_D_sem2" class="text-box" type="text" placeholder="Grade 4">
+                    <input id="freshman_E_sem2" class="text-box" type="text" placeholder="Grade 5">
+                    <input id="freshman_F_sem2" class="text-box" type="text" placeholder="Grade 6">
+                </div>
+            </div>
+
+            <div id="sophomoreGrades" class="sophomore-a" style="display:none">
+                <div>
+                    <p class="sophomore">Sophomore Semester 1</p>
+                    <p class="sophomore">Sophomore Semester 2</p>
+                </div>
+                <div class="classes">
+                    <input class="text-box" type="text" placeholder="Enter Class 1">
+                    <input class="text-box" type="text" placeholder="Enter Class 2">
+                    <input class="text-box" type="text" placeholder="Enter Class 3">
+                    <input class="text-box" type="text" placeholder="Enter Class 4">
+                    <input class="text-box" type="text" placeholder="Enter Class 5">
+                    <input class="text-box" type="text" placeholder="Enter Class 6">
+                </div>
+                <div class="grades">
+                    <input id="sophomore_A_sem1" class="text-box" type="text" placeholder="Grade 1">
+                    <input id="sophomore_B_sem1" class="text-box" type="text" placeholder="Grade 2">
+                    <input id="sophomore_C_sem1" class="text-box" type="text" placeholder="Grade 3">
+                    <input id="sophomore_D_sem1" class="text-box" type="text" placeholder="Grade 4">
+                    <input id="sophomore_E_sem1" class="text-box" type="text" placeholder="Grade 5">
+                    <input id="sophomore_F_sem1" class="text-box" type="text" placeholder="Grade 6">
+                </div>
+                <div class="classes">
+                    <input class="text-box" type="text" placeholder="Enter Class 1">
+                    <input class="text-box" type="text" placeholder="Enter Class 2">
+                    <input class="text-box" type="text" placeholder="Enter Class 3">
+                    <input class="text-box" type="text" placeholder="Enter Class 4">
+                    <input class="text-box" type="text" placeholder="Enter Class 5">
+                    <input class="text-box" type="text" placeholder="Enter Class 6">
+                </div>
+                <div class="grades">
+                    <input id="sophomore_A_sem2" class="text-box" type="text" placeholder="Grade 1">
+                    <input id="sophomore_B_sem2" class="text-box" type="text" placeholder="Grade 2">
+                    <input id="sophomore_C_sem2" class="text-box" type="text" placeholder="Grade 3">
+                    <input id="sophomore_D_sem2" class="text-box" type="text" placeholder="Grade 4">
+                    <input id="sophomore_E_sem2" class="text-box" type="text" placeholder="Grade 5">
+                    <input id="sophomore_F_sem2" class="text-box" type="text" placeholder="Grade 6">
+                </div>
+            </div>
+            
+            <div id="juniorGrades" class="junior-a" style="display:none">
+                <div>
+                    <p class="junior">Junior Semester 1</p>
+                    <p class="junior">Junior Semester 2</p>
+                </div>
+                <div class="classes">
+                    <input class="text-box" type="text" placeholder="Enter Class 1">
+                    <input class="text-box" type="text" placeholder="Enter Class 2">
+                    <input class="text-box" type="text" placeholder="Enter Class 3">
+                    <input class="text-box" type="text" placeholder="Enter Class 4">
+                    <input class="text-box" type="text" placeholder="Enter Class 5">
+                    <input class="text-box" type="text" placeholder="Enter Class 6">
+                </div>
+                <div class="grades">
+                    <input id="junior_A_sem1" class="text-box" type="text" placeholder="Grade 1">
+                    <input id="junior_B_sem1" class="text-box" type="text" placeholder="Grade 2">
+                    <input id="junior_C_sem1" class="text-box" type="text" placeholder="Grade 3">
+                    <input id="junior_D_sem1" class="text-box" type="text" placeholder="Grade 4">
+                    <input id="junior_E_sem1" class="text-box" type="text" placeholder="Grade 5">
+                    <input id="junior_F_sem1" class="text-box" type="text" placeholder="Grade 6">
+                </div>
+                <div class="classes">
+                    <input class="text-box" type="text" placeholder="Enter Class 1">
+                    <input class="text-box" type="text" placeholder="Enter Class 2">
+                    <input class="text-box" type="text" placeholder="Enter Class 3">
+                    <input class="text-box" type="text" placeholder="Enter Class 4">
+                    <input class="text-box" type="text" placeholder="Enter Class 5">
+                    <input class="text-box" type="text" placeholder="Enter Class 6">
+                </div>
+                <div class="grades">
+                    <input id="junior_A_sem2" class="text-box" type="text" placeholder="Grade 1">
+                    <input id="junior_B_sem2" class="text-box" type="text" placeholder="Grade 2">
+                    <input id="junior_C_sem2" class="text-box" type="text" placeholder="Grade 3">
+                    <input id="junior_D_sem2" class="text-box" type="text" placeholder="Grade 4">
+                    <input id="junior_E_sem2" class="text-box" type="text" placeholder="Grade 5">
+                    <input id="junior_F_sem2" class="text-box" type="text" placeholder="Grade 6">
+                </div>
+            </div>
+
+            <div id="seniorGrades" class="senior-a" style="display:none">
+                <div>
+                    <p class="senior">Senior Semester 1</p>
+                    <p class="senior">Senior Semester 2</p>
+                </div>
+                <div class="classes">
+                    <input class="text-box" type="text" placeholder="Enter Class 1">
+                    <input class="text-box" type="text" placeholder="Enter Class 2">
+                    <input class="text-box" type="text" placeholder="Enter Class 3">
+                    <input class="text-box" type="text" placeholder="Enter Class 4">
+                    <input class="text-box" type="text" placeholder="Enter Class 5">
+                    <input class="text-box" type="text" placeholder="Enter Class 6">
+                </div>
+                <div class="grades">
+                    <input id="senior_A_sem1" class="text-box" type="text" placeholder="Grade 1">
+                    <input id="senior_B_sem1" class="text-box" type="text" placeholder="Grade 2">
+                    <input id="senior_C_sem1" class="text-box" type="text" placeholder="Grade 3">
+                    <input id="senior_D_sem1" class="text-box" type="text" placeholder="Grade 4">
+                    <input id="senior_E_sem1" class="text-box" type="text" placeholder="Grade 5">
+                    <input id="senior_F_sem1" class="text-box" type="text" placeholder="Grade 6">
+                </div>
+                <div class="classes">
+                    <input class="text-box" type="text" placeholder="Enter Class 1">
+                    <input class="text-box" type="text" placeholder="Enter Class 2">
+                    <input class="text-box" type="text" placeholder="Enter Class 3">
+                    <input class="text-box" type="text" placeholder="Enter Class 4">
+                    <input class="text-box" type="text" placeholder="Enter Class 5">
+                    <input class="text-box" type="text" placeholder="Enter Class 6">
+                </div>
+                <div class="grades">
+                    <input id="senior_A_sem2" class="text-box" type="text" placeholder="Grade 1">
+                    <input id="senior_B_sem2" class="text-box" type="text" placeholder="Grade 2">
+                    <input id="senior_C_sem2" class="text-box" type="text" placeholder="Grade 3">
+                    <input id="senior_D_sem2" class="text-box" type="text" placeholder="Grade 4">
+                    <input id="senior_E_sem2" class="text-box" type="text" placeholder="Grade 5">
+                    <input id="senior_F_sem2" class="text-box" type="text" placeholder="Grade 6">
+                </div>
+            </div>
+
+            <div>
+                <button class="gpa-button" onclick="grades()">
+                    Calculate GPA
+                </button>
+            </div>
+            
+            <div id="gpa_info" class="grade-points">
+                <p>Grade Conversions: (If class is weighted add extra point if grade is C or higher)</p>
+                <p>A -> 4</p>
+                <p>B -> 3</p>
+                <p>C -> 2</p>
+                <p>D -> 1</p>
+                <p>F -> 0</p>
+            </div>
+            <div id="gpa_result" class="gpa-result">GPA:</div>
+            <div class="result" id="result"></div>
+            
+
+        </main>
+    </body>
+</html>
